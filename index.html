@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="" >Your Website Title</title>
-  <style>
-    .container{
-        text-align: center;
-    }
-  </style>
-</head>
-<body>
-    <div class="container">
-        <h1>&#127871; Flixster </h1>
-    </div>
-    <form>
-        <input id="searchInput" type="text" name="search" placeholder="Enter text">
-        <button id="submitBtn" type="submit">Search</button>
-    </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title class="" >Your Website Title</title>
+        <link rel="stylesheet" href="style.css">
+    <style>
+        .container{
+            text-align: center;
+            background-color: grey;
+            color: white;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>&#127871; Flixster </h1>
+        
+            <form>
+                <input id="searchInput" type="text" name="search" placeholder="Enter text">
+                <button id="submitBtn" type="submit">Search</button>
+                
+                
+            </form>
+            <div><button id="closeSearchBtn" type="button">Close Search</button></div>
 
-    <div id="gifsDiv"></div>
-    <button id="loadMoreBtn">Load more button</button>
-    <button id="close-search-btn" type="button">Close Search</button>
-
+        <div id="gifsDiv"></div>
+        <button id="loadMoreBtn">Load more button</button>
+        </div>
     <script src="script.js"></script>
 </body>
 </html>
