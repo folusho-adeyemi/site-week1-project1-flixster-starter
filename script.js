@@ -10,7 +10,7 @@ const searchForm = document.querySelector('form');
 const searchInput = document.getElementById('searchInput');
 const gifsDiv = document.getElementById('gifsDiv');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
-
+const closeSearchBtn = document.getElementById('close-search-btn');
 
 let page = 1;
 
@@ -52,7 +52,7 @@ function displayMovies(movies) {
     poster.alt = movie.title;
 
     const votes = document.createElement('p');
-    votes.textContent = `Votes: ${movie.vote_count}`;
+    votes.textContent = `Votes: ${movie.vote_average}`;
 
     movieDiv.appendChild(title);
     movieDiv.appendChild(poster);
@@ -80,9 +80,20 @@ async function loadMoreMovies() {
   displayMovies(movies);
 }
 
+//Function to close search and disply current movies
+async function closeSearch(){
+    searchInput.value = '';
+    gifsDiv.innerHTML = '';
+    API_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`;
+    const movies =  await fetchMovies(API_URL);
+    displayMovies(movies);
+    loadMoreBtn.style.display = 'block';
+}
+
 // Event listeners
 searchForm.addEventListener('submit', handleFormSubmit);
 loadMoreBtn.addEventListener('click', loadMoreMovies);
+closeSearchBtn.addEventListener('click', closeSearch);
 
 // Fetch movies on page load
 window.addEventListener('load', async () => {
