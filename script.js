@@ -10,7 +10,7 @@ const searchForm = document.querySelector('form');
 const searchInput = document.getElementById('searchInput');
 const gifsDiv = document.getElementById('gifsDiv');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
-const closeSearchBtn = document.getElementById('close-search-btn');
+const closeSearchBtn = document.getElementById('closeSearchBtn');
 
 let page = 1;
 
@@ -44,7 +44,7 @@ function displayMovies(movies) {
     const movieDiv = document.createElement('div');
     movieDiv.classList.add('movie');
 
-    const title = document.createElement('h2');
+    const title = document.createElement('h3');
     title.textContent = movie.title;
 
     const poster = document.createElement('img');
@@ -52,11 +52,13 @@ function displayMovies(movies) {
     poster.alt = movie.title;
 
     const votes = document.createElement('p');
-    votes.textContent = `Votes: ${movie.vote_average}`;
+    votes.textContent = `\u2B50 Votes: ${movie.vote_average}`;
 
-    movieDiv.appendChild(title);
+    
     movieDiv.appendChild(poster);
     movieDiv.appendChild(votes);
+    movieDiv.appendChild(title);
+    
 
     gifsDiv.appendChild(movieDiv);
   });
