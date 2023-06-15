@@ -1,1 +1,36 @@
+body{
+    background-color: grey;
+    display: inline;
+}
 
+
+.movie {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    text-align: left;
+    border-radius: 1%;
+  }
+  
+  .movie img {
+    width: 100%;
+    height: 450px;
+  }
+  
+  .movie h3 {
+    height: 60px;
+    display: grid;
+    align-items: left;
+    justify-content: left;
+    color: aliceblue;
+    font-size: auto;
+    margin-top:0%;
+    margin-bottom: 0px;
+  }
+  
+  .movie p{
+    justify-content: left;
+    color:aliceblue;
+    margin-top: 0%;
+    align-items: left;
+  }
