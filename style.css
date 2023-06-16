@@ -1,5 +1,5 @@
 body{
-    background-color: grey;
+    background-color: rgb(25, 24, 24);
     display: inline;
 }
 
@@ -9,18 +9,20 @@ body{
     width: 200px;
     margin: 10px;
     text-align: left;
-    border-radius: 1%;
   }
   
   .movie img {
     width: 100%;
-    height: 450px;
+    height: 300px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
   }
   
   .movie h3 {
     height: 60px;
     display: grid;
     align-items: left;
+    text-overflow: ellipsis;
     justify-content: left;
     color: aliceblue;
     font-size: auto;
