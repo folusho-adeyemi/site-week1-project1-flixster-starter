@@ -52,7 +52,7 @@ function displayMovies(movies) {
     poster.alt = movie.title;
 
     const votes = document.createElement('p');
-    votes.textContent = `\u2B50 Votes: ${movie.vote_average}`;
+    votes.textContent = `\u2B50 ${movie.vote_average}`;
 
     
     movieDiv.appendChild(poster);
