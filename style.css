@@ -1,20 +1,27 @@
+.container{
+    text-align: center;
+    background-color: rgb(25, 24, 24);
+    color: white;
+}
+
 body{
     background-color: rgb(25, 24, 24);
-    display: inline;
+    display: grid;
 }
 
 
 .movie {
-    display: inline-block;
+    display: inline-grid;
+    margin-top: 10px;
     width: 200px;
-    margin: 10px;
+    margin: 5px;
     text-align: left;
   }
   
   .movie img {
     width: 100%;
     height: 300px;
-    border-radius: 8px;
+    border-radius: 6px;
     border: 2px solid #ddd;
   }
   
@@ -35,4 +42,8 @@ body{
     color:aliceblue;
     margin-top: 0%;
     align-items: left;
+  }
+
+  .gifsDiv{
+    margin-top: 1px;
   }
