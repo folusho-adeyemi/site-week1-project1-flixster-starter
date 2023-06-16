@@ -1,6 +1,5 @@
 console.log("Hello");
 
-
 // Constants
 const API_KEY = '291cfe5e18caa2f0caa8aa14be45de48';
 let API_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`;
@@ -35,12 +34,12 @@ function displayMovies(movies) {
         return;
       }
 
-
   movies.forEach((movie) => {
     if (!movie.poster_path) {
           // Skip movies without a poster path
      return;
     }
+
     const movieDiv = document.createElement('div');
     movieDiv.classList.add('movie-card');
 
@@ -61,7 +60,6 @@ function displayMovies(movies) {
     movieDiv.appendChild(votes);
     movieDiv.appendChild(title);
     
-
     moviesDiv.appendChild(movieDiv);
   });
 }
@@ -71,7 +69,11 @@ async function handleFormSubmit(event) {
   event.preventDefault();
   moviesDiv.innerHTML = '';
   page = 1;
-  API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchInput.value}`;
+  if(searchInput.value === ""){
+    API_URL =`https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&page=${page}`;
+  }else{
+    API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchInput.value}`;
+  }
   const movies = await fetchMovies(API_URL);
   displayMovies(movies);
   loadMoreBtn.style.display = 'block';
@@ -92,7 +94,6 @@ async function closeSearch(){
     API_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&page=${page}`;
     const movies =  await fetchMovies(API_URL);
     displayMovies(movies);
-    loadMoreBtn.style.display = 'block';
 }
 
 // Event listeners
