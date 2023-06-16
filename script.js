@@ -7,10 +7,10 @@ let API_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}
 
 // DOM Elements
 const searchForm = document.querySelector('form');
-const searchInput = document.getElementById('searchInput');
-const gifsDiv = document.getElementById('gifsDiv');
-const loadMoreBtn = document.getElementById('loadMoreBtn');
-const closeSearchBtn = document.getElementById('closeSearchBtn');
+const searchInput = document.getElementById('search-input');
+const moviesDiv = document.getElementById('movies-grid');
+const loadMoreBtn = document.getElementById('load-more-movies-btn');
+const closeSearchBtn = document.getElementById('close-search-btn');
 
 let page = 1;
 
@@ -31,7 +31,7 @@ function displayMovies(movies) {
         // Handle the case when no movies are returned
         const errorMessage = document.createElement('p');
         errorMessage.textContent = 'No movies found.';
-        gifsDiv.appendChild(errorMessage);
+        moviesDiv.appendChild(errorMessage);
         return;
       }
 
@@ -42,32 +42,34 @@ function displayMovies(movies) {
      return;
     }
     const movieDiv = document.createElement('div');
-    movieDiv.classList.add('movie');
+    movieDiv.classList.add('movie-card');
 
     const title = document.createElement('h3');
+    title.classList.add('movie-title');
     title.textContent = movie.title;
 
     const poster = document.createElement('img');
+    poster.classList.add('movie-poster');
     poster.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
     poster.alt = movie.title;
 
     const votes = document.createElement('p');
+    votes.classList.add('movie-votes')
     votes.textContent = `\u2B50 ${movie.vote_average}`;
 
-    
     movieDiv.appendChild(poster);
     movieDiv.appendChild(votes);
     movieDiv.appendChild(title);
     
 
-    gifsDiv.appendChild(movieDiv);
+    moviesDiv.appendChild(movieDiv);
   });
 }
 
 // Function to handle form submission
 async function handleFormSubmit(event) {
   event.preventDefault();
-  gifsDiv.innerHTML = '';
+  moviesDiv.innerHTML = '';
   page = 1;
   API_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchInput.value}`;
   const movies = await fetchMovies(API_URL);
@@ -84,9 +86,10 @@ async function loadMoreMovies() {
 
 //Function to close search and disply current movies
 async function closeSearch(){
+    page = 1;
     searchInput.value = '';
-    gifsDiv.innerHTML = '';
-    API_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}`;
+    moviesDiv.innerHTML = '';
+    API_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&page=${page}`;
     const movies =  await fetchMovies(API_URL);
     displayMovies(movies);
     loadMoreBtn.style.display = 'block';
