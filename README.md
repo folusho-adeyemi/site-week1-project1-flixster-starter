@@ -6,7 +6,7 @@ Submitted by: **Folusho Adeyemi**
 
 Estimated time spent: **#** hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Flixster Deployed Site](https://folusho-adeyemi.github.io/site-week1-project1-flixster-starter/)
 
 ### Application Features
 
