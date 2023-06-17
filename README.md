@@ -4,7 +4,7 @@
 
 Submitted by: **Folusho Adeyemi**
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **25.5** hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site](https://folusho-adeyemi.github.io/site-week1-project1-flixster-starter/)
 
@@ -46,7 +46,6 @@ Deployed Application (optional): [Flixster Deployed Site](https://folusho-adeyem
     <p>Loom | Free Screen & Video Recording Software | Loom - 16 June 2023 - Watch Video</p>
     <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/76b17b5d78784c4abd2b84ee53b1e410-with-play.gif">
   </a>
-. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
 
 <a href="https://www.loom.com/share/76b17b5d78784c4abd2b84ee53b1e410">
     <p>Loom | Free Screen & Video Recording Software | Loom - 16 June 2023 - Watch Video</p>
@@ -57,15 +56,15 @@ Deployed Application (optional): [Flixster Deployed Site](https://folusho-adeyem
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The labs really set me up for success when it came to the assignment, especially with API fetching. However, I have to admit, there were some parts of the assignment that threw me off guard. Handling form submissions and dynamically updating the page with movie results turned out to be trickier than I anticipated. It took some extra effort, research, and trial-and-error to figure it all out. But I didn't give up. I dug deeper, explored different approaches, and eventually found solutions that did the job. It was definitely a valuable learning experience that pushed me to expand my understanding and problem-solving abilities.
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+Given more time, I would have optimized the code for efficiency, added more features to enhance functionality, improved the overall design and appeal of the website, and prioritized accessibility for a diverse range of users. I would have effectively understod more concepts of javascript, css and html and better implement the features in my code.
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+During the project demo, fetching data from the API and implementing certain features went well. However, the CSS styling did not turn out as planned. I noticed that one of my peers made their project more responsive, which is something I would like to try in the future. Additionally, I would have liked to include a YouTube trailer and create a design more reminiscent of Netflix for the flixster project.
 
 ### Open-source libraries used
 
@@ -74,3 +73,13 @@ Add your response here
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
+Syed!!
+Tim!
+Diogo!
+Thomas!
+Henry!
+John!
+Immanuella!
+Gabrie!
+Adrian!
