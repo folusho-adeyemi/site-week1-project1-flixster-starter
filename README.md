@@ -42,11 +42,11 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `<a href="https://www.loom.com/share/76b17b5d78784c4abd2b84ee53b1e410">
+`TODO://` Add the embedded URL code to your animated app walkthrough below, <a href="https://www.loom.com/share/76b17b5d78784c4abd2b84ee53b1e410">
     <p>Loom | Free Screen & Video Recording Software | Loom - 16 June 2023 - Watch Video</p>
     <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/76b17b5d78784c4abd2b84ee53b1e410-with-play.gif">
   </a>
-`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
+. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
 
 `ADD_EMBEDDED_CODE_HERE`
 
